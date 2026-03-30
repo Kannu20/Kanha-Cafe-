@@ -58,7 +58,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-cream">
       {/* Hero */}
-      <div className="bg-gradient-to-br from-mocha to-[#5a2f18] py-20 sm:py-28 px-4 sm:px-6 pt-28 sm:pt-36">
+      <div className="bg-gradient-to-br from-mocha to-[#5a2f18] py-28 px-6 pt-36">
         <div className="max-w-7xl mx-auto text-center">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -71,7 +71,7 @@ export default function ContactPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white"
+            className="font-display text-6xl font-bold text-white"
           >
             Get in Touch
           </motion.h1>
@@ -108,13 +108,13 @@ export default function ContactPage() {
       </div>
 
       {/* Form + Map */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-16 sm:pb-20 grid lg:grid-cols-2 gap-8 lg:gap-10">
+      <div className="max-w-7xl mx-auto px-6 pb-20 grid lg:grid-cols-2 gap-10">
         {/* Contact Form */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="bg-white rounded-3xl shadow-lg p-6 sm:p-8"
+          className="bg-white rounded-3xl shadow-lg p-8"
         >
           <h2 className="font-display text-2xl font-bold text-mocha mb-6">Send us a Message</h2>
 

@@ -122,7 +122,7 @@ export default function BookingPage() {
           <p className="text-gray-500 font-medium max-w-lg mx-auto">Fill Form → Confirm → WhatsApp</p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+        <div className="grid lg:grid-cols-12 gap-10 items-start">
           
           {/* LEFT: Booking Form */}
           <div className="lg:col-span-8 bg-white rounded-3xl shadow-xl shadow-gray-200/50 border border-gray-100 p-6 sm:p-10 relative overflow-hidden">
@@ -267,8 +267,8 @@ export default function BookingPage() {
           </div>
 
           {/* RIGHT: Booking Policies */}
-          <div className="lg:col-span-4 bg-gray-900 text-white rounded-3xl shadow-xl p-6 sm:p-8 sticky top-32">
-            <h3 className="font-display text-xl sm:text-2xl font-bold mb-6 text-bakery-200">Booking Policies</h3>
+          <div className="lg:col-span-4 bg-gray-900 text-white rounded-3xl shadow-xl p-8 sticky top-32">
+            <h3 className="font-display text-2xl font-bold mb-6 text-bakery-200">Booking Policies</h3>
             
             <div className="space-y-6">
               <div className="flex items-start gap-4 pb-4 border-b border-gray-800">

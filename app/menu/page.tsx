@@ -37,12 +37,12 @@ function MenuContent() {
   return (
     <div className="min-h-screen bg-cream pt-24 pb-16">
       {/* Header */}
-      <div className="bg-gradient-to-br from-mocha to-[#5a2f18] py-10 sm:py-16 px-4 sm:px-6 mb-8 sm:mb-10 mx-4 sm:mx-0 rounded-2xl sm:rounded-none mt-2 sm:mt-0">
+      <div className="bg-gradient-to-br from-mocha to-[#5a2f18] py-16 px-6 mb-10">
         <div className="max-w-7xl mx-auto text-center">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-accent text-2xl sm:text-3xl text-caramel mb-2"
+            className="font-accent text-3xl text-caramel mb-2"
           >
             Freshly Baked
           </motion.p>
@@ -50,7 +50,7 @@ function MenuContent() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white"
+            className="font-display text-5xl md:text-6xl font-bold text-white"
           >
             Our Menu
           </motion.h1>
@@ -58,7 +58,7 @@ function MenuContent() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="font-body text-sm sm:text-base text-bakery-200 mt-3 sm:mt-4 max-w-xl mx-auto px-4 sm:px-0"
+            className="font-body text-bakery-200 mt-4 max-w-xl mx-auto"
           >
             Every item crafted with care, baked fresh each morning in our newai kitchen.
           </motion.p>

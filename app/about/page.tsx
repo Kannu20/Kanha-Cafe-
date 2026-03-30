@@ -62,7 +62,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-cream">
       {/* Hero */}
-      <section className="relative h-[60vh] sm:h-[70vh] flex items-end overflow-hidden">
+      <section className="relative h-[70vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&q=80"
@@ -74,11 +74,11 @@ export default function AboutPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-mocha via-mocha/60 to-transparent" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-12 sm:pb-16 w-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pb-16 w-full">
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="font-accent text-2xl sm:text-3xl text-caramel mb-2"
+            className="font-accent text-3xl text-caramel mb-2"
           >
             Our Story
           </motion.p>
@@ -86,7 +86,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15 }}
-            className="font-display text-5xl md:text-7xl font-bold text-white leading-tight max-w-2xl"
+            className="font-display text-6xl md:text-7xl font-bold text-white leading-tight max-w-2xl"
           >
             Baked in<br />
             <span className="italic text-caramel">newai's Heart</span>
@@ -95,8 +95,8 @@ export default function AboutPage() {
       </section>
 
       {/* Story Section */}
-      <section className="py-16 sm:py-20 px-6">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <section className="py-20 px-6">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -155,9 +155,9 @@ export default function AboutPage() {
       {/* Values */}
       <section className="py-20 px-6 bg-mocha">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-10 sm:mb-14">
-            <p className="font-accent text-2xl sm:text-3xl text-caramel mb-2">What We Stand For</p>
-            <h2 className="font-display text-4xl sm:text-5xl font-bold text-white">Our Values</h2>
+          <div className="text-center mb-14">
+            <p className="font-accent text-3xl text-caramel mb-2">What We Stand For</p>
+            <h2 className="font-display text-5xl font-bold text-white">Our Values</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v, i) => (
@@ -197,13 +197,13 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08 }}
-                  className={`relative flex items-center gap-6 ${i % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'} flex-row pl-[4.5rem] sm:pl-0`}
+                  className={`relative flex items-center gap-6 ${i % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'} flex-row pl-16 sm:pl-0`}
                 >
                   {/* Year badge */}
-                  <div className="absolute left-8 sm:left-1/2 -translate-x-1/2 w-14 h-14 sm:w-16 sm:h-16 bg-bakery-600 rounded-2xl flex items-center justify-center shadow-lg shadow-bakery-600/30 shrink-0 z-10">
-                    <span className="font-display text-xs sm:text-sm font-bold text-white text-center leading-tight">{m.year}</span>
+                  <div className="absolute left-0 sm:left-1/2 -translate-x-1/2 w-16 h-16 bg-bakery-600 rounded-2xl flex items-center justify-center shadow-lg shadow-bakery-600/30 shrink-0 z-10">
+                    <span className="font-display text-sm font-bold text-white text-center leading-tight">{m.year}</span>
                   </div>
-                  <div className={`sm:w-[calc(50%-3rem)] bg-white rounded-2xl p-4 sm:p-5 shadow-md ${i % 2 === 0 ? 'sm:mr-auto sm:text-right' : 'sm:ml-auto w-full'}`}>
+                  <div className={`sm:w-[calc(50%-3rem)] bg-white rounded-2xl p-5 shadow-md ${i % 2 === 0 ? 'sm:mr-auto sm:text-right' : 'sm:ml-auto'}`}>
                     <p className="font-body text-gray-600 leading-relaxed text-sm">{m.event}</p>
                   </div>
                 </motion.div>
