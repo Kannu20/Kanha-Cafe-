@@ -93,7 +93,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const useCart = () => {
+export const useCart = (): CartContextValue => {
   const ctx = useContext(CartContext);
   if (!ctx) throw new Error('useCart must be inside CartProvider');
   return ctx;
