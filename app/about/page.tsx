@@ -60,7 +60,7 @@ const milestones = [
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-cream">
+    <div className="min-h-screen bg-cream overflow-x-hidden w-full">
       {/* Hero */}
       <section className="relative h-[60vh] sm:h-[70vh] flex items-end overflow-hidden">
         <div className="absolute inset-0">
@@ -88,7 +88,7 @@ export default function AboutPage() {
             transition={{ delay: 0.15 }}
             className="font-display text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-[1.1] max-w-2xl mx-auto sm:mx-0"
           >
-            Baked in<br className="max-sm:hidden" />
+            Baked in<br />
             <span className="italic text-caramel"> newai's Heart</span>
           </motion.h1>
         </div>
@@ -200,7 +200,7 @@ export default function AboutPage() {
                   className={`relative flex items-center gap-6 ${i % 2 === 0 ? 'sm:flex-row' : 'sm:flex-row-reverse'} flex-row pl-16 sm:pl-0`}
                 >
                   {/* Year badge */}
-                  <div className="absolute left-0 sm:left-1/2 -translate-x-1/2 w-16 h-16 bg-bakery-600 rounded-2xl flex items-center justify-center shadow-lg shadow-bakery-600/30 shrink-0 z-10">
+                  <div className="absolute left-0 sm:left-1/2 max-sm:translate-x-0 -translate-x-1/2 w-16 h-16 bg-bakery-600 rounded-2xl flex items-center justify-center shadow-lg shadow-bakery-600/30 shrink-0 z-10">
                     <span className="font-display text-sm font-bold text-white text-center leading-tight">{m.year}</span>
                   </div>
                   <div className={`sm:w-[calc(50%-3rem)] bg-white rounded-2xl p-5 shadow-md ${i % 2 === 0 ? 'sm:mr-auto sm:text-right' : 'sm:ml-auto'}`}>
