@@ -18,8 +18,8 @@ export default function CartItem({ item }: Props) {
       layout
       initial={{ opacity: 0, x: -30 }}
       animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: 30, height: 0 }}
-      transition={{ duration: 0.3 }}
+      exit={{ opacity: 0, x: 20, height: 0, overflow: 'hidden' }}
+      transition={{ duration: 0.2, ease: 'circOut' }}
       className="flex gap-3 sm:gap-4 p-3 sm:p-4 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow relative"
     >
       {/* Image */}
