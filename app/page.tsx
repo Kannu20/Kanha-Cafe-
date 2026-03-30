@@ -25,7 +25,7 @@ export default function HomePage() {
   useEffect(() => { setMounted(true); }, []);
 
   return (
-    <div className="bg-cream">
+    <div className="bg-cream overflow-x-hidden w-full">
       {/* ── HERO ────────────────────────────────── */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* BG gradient */}
@@ -57,7 +57,7 @@ export default function HomePage() {
               transition={{ delay: 0.35 }}
               className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.1] mb-4 sm:mb-6"
             >
-              Kanha<br className="max-sm:hidden" />
+              Kanha<br />
               <span className="text-caramel italic">Bakers</span>
             </motion.h1>
             <motion.p
@@ -177,7 +177,7 @@ export default function HomePage() {
           >
             <p className="font-accent text-2xl sm:text-3xl text-caramel mb-2">Our Story</p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-              Baked Fresh.<br className="hidden sm:block" />Served with Pride.
+              Baked Fresh.<br />Served with Pride.
             </h2>
             <p className="font-body text-sm sm:text-base text-bakery-200 leading-relaxed mb-4">
               Founded in 2008 by the Sharma family, Kanha Bakers began as a small neighborhood bakery with a single oven and an enormous dream — to bring European artisan baking techniques to the people of newai.
