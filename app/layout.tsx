@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body>
+      <body className="overflow-x-hidden w-full">
         <CartProvider>
           <Navbar />
           <main className="page-transition min-h-screen">
