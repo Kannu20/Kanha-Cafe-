@@ -1464,26 +1464,27 @@ export default function CheckoutPage() {
   // ── SUCCESS ─────────────────────────────────────────────────────────────
   if (step === 'success') {
     return (
-      <div className="min-h-screen bg-cream pt-24 flex items-center justify-center px-6">
+      <div className="min-h-screen bg-cream pt-24 pb-12 flex items-center justify-center px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, scale: 0.85, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ type: 'spring', stiffness: 180, damping: 20 }}
-          className="bg-white rounded-3xl shadow-2xl p-10 sm:p-14 text-center max-w-lg w-full border border-bakery-100"
+          className="bg-white rounded-3xl shadow-2xl p-6 sm:p-10 md:p-14 text-center max-w-lg w-full border border-bakery-100"
         >
           <motion.div
             initial={{ scale: 0, rotate: -30 }}
             animate={{ scale: 1, rotate: 0 }}
             transition={{ type: 'spring', stiffness: 200, delay: 0.2 }}
-            className="w-24 h-24 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl shadow-green-400/30"
+            className="w-20 h-20 sm:w-24 sm:h-24 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl shadow-green-400/30"
           >
-            <CheckCircle size={48} className="text-white" />
+            <CheckCircle size={40} className="text-white sm:hidden" />
+            <CheckCircle size={48} className="text-white hidden sm:block" />
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
-            <p className="font-accent text-2xl text-caramel mb-1">Thank you!</p>
-            <h2 className="font-display text-3xl font-bold text-mocha mb-3">Order Placed! 🎉</h2>
-            <p className="font-body text-gray-500 mb-1 text-sm">Your order has been sent to our team via WhatsApp.</p>
+            <p className="font-accent text-xl sm:text-2xl text-caramel mb-1">Thank you!</p>
+            <h2 className="font-display text-2xl sm:text-3xl font-bold text-mocha mb-3">Order Placed! 🎉</h2>
+            <p className="font-body text-gray-500 mb-1 text-sm max-w-[280px] sm:max-w-none mx-auto">Your order has been sent to our team via WhatsApp.</p>
             <p className="font-body text-xs text-gray-400 mb-5">
               {details.orderType === 'pickup'
                 ? `Ready for pickup at ${details.pickupTime}.`
@@ -1520,25 +1521,27 @@ export default function CheckoutPage() {
                     : 'Home Delivery' },
                 { icon: '💰', label: 'Total', val: `₹${grandTotal}` },
               ].map(r => (
-                <div key={r.label} className="bg-bakery-50 rounded-2xl p-4 text-left border border-bakery-100">
+                <div key={r.label} className="bg-bakery-50 rounded-2xl p-3 sm:p-4 text-left border border-bakery-100 min-w-0">
                   <p className="text-base mb-1">{r.icon}</p>
-                  <p className="font-body text-xs text-gray-400">{r.label}</p>
-                  <p className="font-body text-sm font-bold text-mocha">{r.val}</p>
+                  <p className="font-body text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider">{r.label}</p>
+                  <p className="font-body text-xs sm:text-sm font-bold text-mocha truncate" title={r.val}>{r.val}</p>
                 </div>
               ))}
             </div>
 
-            <div className="flex gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href="https://wa.me/919602870828"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 py-4 bg-green-500 text-white font-body font-bold rounded-2xl flex items-center justify-center gap-2 hover:bg-green-600 transition-colors shadow-lg shadow-green-500/20"
+                className="w-full sm:flex-1 py-4 bg-green-500 text-white font-body font-bold rounded-2xl flex items-center justify-center gap-2 hover:bg-green-600 transition-colors shadow-lg shadow-green-500/20 active:scale-95"
               >
                 <MessageCircle size={18} />
-                {payMethod === 'upi' ? 'Send Screenshot' : 'Track Order'}
+                <span>{payMethod === 'upi' ? 'Send Screenshot' : 'Track Order'}</span>
               </a>
-              <Link href="/" className="flex-1 bakery-btn justify-center py-4">Back Home</Link>
+              <Link href="/" className="w-full sm:flex-1 bakery-btn justify-center py-4 rounded-2xl active:scale-95">
+                Back Home
+              </Link>
             </div>
           </motion.div>
         </motion.div>
